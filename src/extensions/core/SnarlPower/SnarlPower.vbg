@@ -1,0 +1,3 @@
+VBGROUP 5.0
+Project=SnarlPower.vbp
+StartupProject=..\..\..\dev\extension_tester\snarl_extension_tester.vbp

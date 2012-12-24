@@ -1,0 +1,18 @@
+[
+    uuid(FA379CCD-D8E2-4b68-BDD8-078B730D0383),
+    helpstring("Snarl Extensions Type Library V1.0"),
+    version(1.0)
+
+]
+
+library libSnarlExtn {
+
+    importlib("stdole2.tlb");
+    importlib("..\\..\\..\\..\\melon\\current\\typelib\\melon.tlb");
+
+    #include "types.inc"
+    #include "extension.inc"
+
+
+};
+

@@ -1,0 +1,39 @@
+
+
+	SiteChecker (LOGCABIN) Change Log
+	=================================
+
+	(C) 2011 full phat products
+	(C) 2010 k23 productions
+
+
+	Build 4
+
+	- Bumped to 0.9 as almost ready for final.
+
+	- Added icons to prefs panel.
+
+	- Code tidyup: removed Main() and TWindow as per recent changes
+	  to snaRSS.
+
+
+	Build 3
+
+	- Registers on a SNARL_BROADCAST_LAUNCHED.
+
+	- Password protected.
+
+	- Now uses Snarl V43 API.
+
+
+	Build 2
+
+	- Declassified, renamed as SiteChecker.
+
+
+	Build 1
+
+	- Designated LOGCABIN for Golf, Kilo and November use.
+
+
+

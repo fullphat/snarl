@@ -1,0 +1,25 @@
+
+<html>
+<head>
+<title>Simple Snarl JSON Example</title>
+</head>
+
+<body>
+<p><img src="json.jpg"></p>
+<p>Including support for Snarl via JSON is incredibly simple</p>
+
+<p>Just reference the "snarl.js" file included in this example, then...</p>
+
+<p><b>Create a notification class object:</b></p>
+<pre>myClass = new Snarl.NotificationType('notification_class_here', true);</pre>
+
+<p><b>Register with Snarl:</b></p>
+<pre>Snarl.register('your_website_name', [myClass]);</pre>
+
+<p><b>Display a notification:</b></p>
+<pre>Snarl.notify(myClass, 'a_title', 'some_text', Snarl.Priority.VeryLow, false);</pre>
+
+<p><a href="zzsnarltest.htm">Try it for yourself</a></p>
+
+<p>(Remember that Snarl must be running on the local computer and <b>Network->Listen for incoming JSON Notifications?</b> must be <b>ON</b>)</p>
+

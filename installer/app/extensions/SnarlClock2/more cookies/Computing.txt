@@ -1,0 +1,30 @@
+# Computing quotes
+# Taken from http://www.quotationspage.com/quotes/
+"The computing field is always in need of new cliches." Alan Perlis 
+"Computers make it easier to do a lot of things, but most of the things they make it easier to do don't need to be done." Andy Rooney (1919 - ) 
+"The great thing about a computer notebook is that no matter how much you stuff into it, it doesn't get bigger or heavier." Bill Gates (1955 - ), Business @ The Speed of Thought 
+"If computers get too powerful, we can organize them into a committee -- that will do them in." Bradley's Bromide 
+"Why is it drug addicts and computer afficionados are both called users?" Clifford Stoll 
+"Home computers are being called upon to perform many new functions, including the consumption of homework formerly eaten by the dog." Doug Larson 
+"Computer Science is no more about computers than astronomy is about telescopes." E. W. Dijkstra 
+"Not even computers will replace committees, because committees buy computers." Edward Shepherd Mead 
+"To err is human, but to really foul things up requires a computer." Farmers' Almanac, 1978 
+"I do not fear computers. I fear the lack of them." Isaac Asimov (1920 - 1992) 
+"Part of the inhumanity of the computer is that, once it is competently programmed and working smoothly, it is completely honest." Isaac Asimov (1920 - 1992) 
+"Computers can figure out all kinds of problems, except the things in the world that just don't add up." James Magary 
+"Imagine if every Thursday your shoes exploded if you tied them the usual way. This happens to us all the time with computers, and nobody thinks of complaining." Jef Raskin, interviewed in Doctor Dobb's Journal 
+"The most overlooked advantage to owning a computer is that if they foul up there's no law against wacking them around a little." Joe Martin, Porterfield 
+"One would think that if you're anonymous, you'd do anything you want, but groups have their own sense of community and what we can do." John Allen, A network called 'Internet', CBC, 10-08-93 
+"In all large corporations, there is a pervasive fear that someone, somewhere is having fun with a computer on company time. Networks help alleviate that fear." John C. Dvorak 
+"There is no reason for any individual to have a computer in his home." Ken Olsen (1926 - ), President, Digital Equipment, 1977 
+"The most likely way for the world to be destroyed, most experts agree, is by accident. That's where we come in; we're computer professionals. We cause accidents." Nathaniel Borenstein (1957 - ) 
+"Computers are useless. They can only give you answers." Pablo Picasso (1881 - 1973) 
+"The computer is a moron." Peter Drucker (1909 - 2005) 
+"If you put tomfoolery into a computer, nothing comes out of it but tomfoolery. But this tomfoolery, having passed through a very expensive machine, is somehow ennobled and no-one dares criticize it." Pierre Gallois 
+"Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning." Rick Cook, The Wizardry Compiled 
+"To err is human--and to blame it on a computer is even more so." Robert Orben 
+"If the automobile had followed the same development cycle as the computer, a Rolls-Royce would today cost $100, get a million miles per gallon, and explode once a year, killing everyone inside." Robert X. Cringely, InfoWorld magazine 
+"I think computer viruses should count as life. I think it says something about human nature that the only form of life we have created so far is purely destructive. We've created life in our own image." Stephen Hawking (1942 - ) 
+"All programmers are playwrights and all computers are lousy actors." Unknown 
+"In a few minutes a computer can make a mistake so great that it would have taken many men many months to equal it." Unknown 
+"Where a calculator on the ENIAC is equipped with 18,000 vacuum tubes and weighs 30 tons, computers in the future may have only 1,000 vaccuum tubes and perhaps weigh 1.5 tons." unknown, Popular Mechanics, March 1949 

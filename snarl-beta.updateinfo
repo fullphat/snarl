@@ -1,0 +1,6 @@
+app=Snarl
+release=43.1
+friendly=Snarl R2.5 Beta 1
+setup=snarl-r2.5-beta1-setup.exe
+testmode=0
+url=https://sourceforge.net/projects/snarlwin/files/Snarl/Current%20Beta/

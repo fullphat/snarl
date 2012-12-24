@@ -1,0 +1,34 @@
+[background]
+type=image
+image-top=topWideGradient.png
+image-middle=middleWide.png
+image-bottom=bottomWideGradient.png
+
+[title]
+font-size=9
+font-style=bold
+font-face=Segoe UI
+font-colour=#000000
+outline-colour=0,0,0,96
+margin-left=6
+margin-top=12
+margin-right=6
+margin-bottom=2
+
+[text]
+font-size=8
+font-face=Segoe UI
+font-colour=#000000
+outline-colour=255,255,255,96
+margin-left=6
+margin-top=2
+margin-right=30
+margin-bottom=30
+
+[icon]
+align=left,top
+alpha=222
+offset-x=12
+offset-y=12
+width=32
+float=no
