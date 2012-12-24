@@ -1,0 +1,19 @@
+
+
+
+	SnarlClock2 Change Log
+	----------------------
+
+	- Released as R1.05
+
+	- Time wasn't being displayed if "Show as text" and "Use 24
+	  Hour clock" were both enabled.  Now fixed.  (40.44)
+
+	- Timeout for hourly reminder (and format preview) is now ten
+	  seconds.  (40.44)
+
+	- Time format toggle switches would sometimes be inaccessable -
+	  now fixed.  (40.44)
+
+	- Custom AM/PM values weren't taking effect - now fixed.  (40.44)
+

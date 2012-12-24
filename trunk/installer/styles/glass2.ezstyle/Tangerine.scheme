@@ -1,0 +1,40 @@
+[background]
+type=v-gradient
+edge-type=solid
+edge-colour=63,63,63,212
+colour1=63,63,63
+colour2=248, 118, 31
+
+[title]
+font-size=10
+font-style=outline,bold
+font-face=Segoe UI
+font-colour=255,255,255,245
+outline-colour=0,0,0,132
+margin-left=6
+margin-top=6
+margin-right=6
+margin-bottom=2
+
+[text]
+font-size=9
+font-face=Segoe UI
+font-style=outline
+font-colour=255,255,255,245
+outline-colour=0,0,0,132
+margin-left=6
+margin-top=2
+margin-right=6
+margin-bottom=6
+
+[icon]
+align=left,top
+alpha=222
+offset-x=6
+offset-y=4
+width=32
+float=no
+
+[effect]
+type=glass
+value=33%

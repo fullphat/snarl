@@ -1,0 +1,3 @@
+VBGROUP 5.0
+Project=script.vbp
+StartupProject=..\..\..\snarl\Snarl.vbp

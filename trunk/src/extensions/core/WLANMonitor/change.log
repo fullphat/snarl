@@ -1,0 +1,16 @@
+
+
+
+	WLAN Monitor Change Log
+	-----------------------
+
+	- Alpha 3.  (41.8)
+
+	- Now starts even if no WLAN devices detected.  Failing if no
+	  devices dected was a good idea in theory but the problem is
+	  with manual switches on laptops that effectively remove the
+	  device from Windows.  (41.8)
+
+	- Rebuilt with clean version of misc.resource.  (41.5)
+
+	- Sensitivity setting is now 3 by default.  (41.5)
