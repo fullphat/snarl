@@ -1687,11 +1687,11 @@ End Sub
 
 Private Function uWantsDropshadow(Optional ByRef ShadowSize As Long) As Boolean
 
+    ShadowSize = g_SafeLong(g_ConfigGet("dropshadow_size"))
+
     ' /* styles can veto the system drop shadow */
 
-    uWantsDropshadow = ((mStyleFlags And S_STYLE_NO_DROPSHADOW) = 0)
-    If uWantsDropshadow Then _
-        ShadowSize = g_SafeLong(g_ConfigGet("dropshadow_size"))
+    uWantsDropshadow = ((mStyleFlags And S_STYLE_NO_DROPSHADOW) = 0) And (ShadowSize > 0)
 
 End Function
 
