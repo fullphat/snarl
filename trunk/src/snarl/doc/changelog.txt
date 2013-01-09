@@ -2,6 +2,18 @@
 	Snarl Change Log
 	----------------
 
+	- Notifications->Layout->Drop Shadow slider now correctly configures itself
+	  when the panel is opened.  (44.89)
+
+	- Fixed bug which would crash Snarl if a drop shadow size of zero was selected.
+	  (44.89)
+
+	- Released as 3.0.1.  (44.88)
+
+	- Manually revised version to show included missing libmmenu2.0 in installer.  (44.88)
+
+	- Released as 3.0.  (44.87)
+
 	- Moved Presence Overrides, Content Customisation and Redaction settings into
 	  sub-panel which can be accessed from the Event->[Advanced] page.  (44.82)
 

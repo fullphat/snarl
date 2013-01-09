@@ -139,8 +139,8 @@ Dim b As Boolean
             .Add new_BPrefsControl("fancycycle", "notification_scaling", "50%|100%|150%|  200%  ", "Scaling:", uScalingToIndex())
             ' /* dropshadow */
             .Add new_BPrefsControl("banner", "", "Drop Shadow")
-            .Add prefskit_NewSlider("dropshadow_strength", "Strength:", 0, 100, 10, , Val(g_ConfigGet("dropshadow_strength")), "%")
-            .Add prefskit_NewSlider("dropshadow_size", "Size:", 0, 20, 2)
+            .Add prefskit_NewSlider("dropshadow_strength", "Strength:", 0, 100, 10, , g_SafeLong(g_ConfigGet("dropshadow_strength")), "%")
+            .Add prefskit_NewSlider("dropshadow_size", "Size:", 0, 20, 2, , g_SafeLong(g_ConfigGet("dropshadow_size")))
 
         Case "behaviour"
 '            .Add new_BPrefsControl("banner", "", "General")
