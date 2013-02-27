@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnarlInterfaceLibrary_NET3.5", "SnarlInterfaceLibrary_NET3.5\SnarlInterfaceLibrary_NET3.5.csproj", "{DB1CE585-20A1-497D-9B67-BDEFDCB59755}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnarlInterfaceTest", "SnarlInterfaceTest\SnarlInterfaceTest.csproj", "{9E8BB8DF-3939-4404-A7D2-0B36F47F1F64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnarlInterfaceUnitTest", "SnarlInterfaceUnitTest\SnarlInterfaceUnitTest.csproj", "{41C091E9-FC0A-4462-B2ED-C2E23F518C15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE38403F-286B-4C5F-804C-C40CDF2BF78F}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		SnarlInterface.vsmdi = SnarlInterface.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnarlInterfaceWinFormExample_V42", "SnarlInterfaceWinFormExample_V42\SnarlInterfaceWinFormExample_V42.csproj", "{E16A4B28-A77D-49B2-B6AF-656FBE3A96E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnarlInterfaceLibrary_NET4.0", "SnarlInterfaceLibrary_NET4.0\SnarlInterfaceLibrary_NET4.0.csproj", "{30FC19A8-72FB-46CA-B3DE-6021A7F3D4FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnarlInterfaceWinFormExample_V44", "SnarlInterfaceWinFormExample_V44\SnarlInterfaceWinFormExample_V44.csproj", "{2913B19A-2F45-4ADF-9050-40C45D00695A}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SnarlInterface.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2913B19A-2F45-4ADF-9050-40C45D00695A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2913B19A-2F45-4ADF-9050-40C45D00695A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2913B19A-2F45-4ADF-9050-40C45D00695A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2913B19A-2F45-4ADF-9050-40C45D00695A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30FC19A8-72FB-46CA-B3DE-6021A7F3D4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FC19A8-72FB-46CA-B3DE-6021A7F3D4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FC19A8-72FB-46CA-B3DE-6021A7F3D4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FC19A8-72FB-46CA-B3DE-6021A7F3D4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C091E9-FC0A-4462-B2ED-C2E23F518C15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C091E9-FC0A-4462-B2ED-C2E23F518C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C091E9-FC0A-4462-B2ED-C2E23F518C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C091E9-FC0A-4462-B2ED-C2E23F518C15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E8BB8DF-3939-4404-A7D2-0B36F47F1F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E8BB8DF-3939-4404-A7D2-0B36F47F1F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E8BB8DF-3939-4404-A7D2-0B36F47F1F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E8BB8DF-3939-4404-A7D2-0B36F47F1F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB1CE585-20A1-497D-9B67-BDEFDCB59755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1CE585-20A1-497D-9B67-BDEFDCB59755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1CE585-20A1-497D-9B67-BDEFDCB59755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1CE585-20A1-497D-9B67-BDEFDCB59755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E16A4B28-A77D-49B2-B6AF-656FBE3A96E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16A4B28-A77D-49B2-B6AF-656FBE3A96E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16A4B28-A77D-49B2-B6AF-656FBE3A96E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16A4B28-A77D-49B2-B6AF-656FBE3A96E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
