@@ -34,6 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="libSnarl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Q:\My Documents\coding\cSharp\libSnarl\libSnarl\bin\Release\libSnarl.dll</HintPath>
+    </Reference>
+    <Reference Include="libSNP31, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Q:\My Documents\coding\cSharp\libSNP31\bin\Release\libSNP31.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,24 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\_helpers\Melon.cs">
-      <Link>Melon.cs</Link>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Q:\My Documents\coding\cSharp\_helpers\Melon.cs">
+      <Link>Melon.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\libSnarl\libSnarl\libSnarl.csproj">
-      <Project>{ABA75660-37C9-4894-8D6A-6491C019A8FC}</Project>
-      <Name>libSnarl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\libSNP31\libSNP31.csproj">
-      <Project>{FEAED819-7D57-485E-B93F-572CE2C02A7E}</Project>
-      <Name>libSNP31</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
