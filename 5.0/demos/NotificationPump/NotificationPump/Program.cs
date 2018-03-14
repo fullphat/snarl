@@ -16,14 +16,18 @@ namespace NotificationPump
         static List<string> _quotes = new List<string>();
         static bool _keepRunning = true;
         static Random _teaLeaves = new Random();
+        static byte[] _icon;
 
         static void Main(string[] args)
         {
-            Console.WriteLine("\nNotification Pump");
-            Console.WriteLine("melon.melonlibrary: " + Melon.Melon.Version.ToString());
-            Console.WriteLine("snp31.melonlibrary: " + SNP31.Version.ToString());
+            //Print.Info("\nNotification Pump");
+            Print.Info("melon.melonlibrary: " + Melon.Melon.Version.ToString());
+            Print.Info("snp31.melonlibrary: " + SNP31.Version.ToString());
 
+            // read config file...
             IniFile _config = new IniFile(FilesAndFolders.GetCurrentDirectory() + "config.rc");
+
+            // get [destinations] section...
             List<IniEntry> dests = _config.GetSectionContent("destinations");
             if (dests.Count == 0)
             {
@@ -31,6 +35,7 @@ namespace NotificationPump
                 return;
             }
 
+            // get [quotes] section...
             List<IniEntry> quotes = _config.GetSectionContent("quotes");
             if (quotes.Count == 0)
             {
@@ -38,21 +43,42 @@ namespace NotificationPump
                 return;
             }
 
-            foreach (IniEntry ie in dests)
-                _destinations.Add(ie.Name);
+            // (critical startup complete)
 
-            foreach (IniEntry ie in quotes)
-                _quotes.Add(ie.Name);
+            // cache icon...
+            _icon = SNP31.GetFileAsBytes(FilesAndFolders.GetCurrentDirectory() + "icon.png");
 
+            // install CTRL+C handler...
             Console.CancelKeyPress += new ConsoleCancelEventHandler(Console_CancelKeyPress);
 
+            // set timer...
             Timer quoteMonkey = new Timer(60 * 60 * 1000);
             quoteMonkey.AutoReset = true;
             quoteMonkey.Elapsed += new ElapsedEventHandler(quoteMonkey_Elapsed);
+            Print.Info(string.Format("Sending a quote every {0} seconds...", quoteMonkey.Interval));
+
+            Print.Info("Will send to the following...");
+            foreach (IniEntry ie in dests)
+            {
+                Print.Info("  " + ie.Name);
+                _destinations.Add(ie.Name);
+            }
+
+            // get quotes...
+            foreach (IniEntry ie in quotes)
+            {
+                if (!ie.Name.StartsWith("#"))
+                    _quotes.Add(ie.Name);
+            }
+
+            // send first quote now...
+            Print.Note("Running...");
+            quoteMonkey_Elapsed(null, null);
+
+            // then start timer...
             quoteMonkey.Start();
 
-            Print.Info(string.Format("Next quote in {0} seconds...", quoteMonkey.Interval));
-
+            // run...
             while (_keepRunning)
             {
                 System.Threading.Thread.Sleep(100);
@@ -64,7 +90,7 @@ namespace NotificationPump
         {
             int i = _teaLeaves.Next(_quotes.Count);
             string s = _quotes[i];
-            Print.Note(s);
+            Print.Info(s);
             send(s);
         }
 
@@ -88,9 +114,17 @@ namespace NotificationPump
         {
             // extract the object...
             QuoteAndDestCombo qadc = quoteAndDestCombo as QuoteAndDestCombo;
-            SNP31Request req = SNP31.ForwardRequest("Notification Pump", "Quote of the Day", qadc.Quote, FilesAndFolders.GetCurrentDirectory() + "icon.png", "");
+            SNP31Request req = SNP31.ForwardRequest("Notification Pump", "Quote of the Day", qadc.Quote, _icon);
             SNP31Response rep = SNP31.SendRequest(qadc.Host, qadc.Port, req);
-            Print.Note(string.Format("{0}:{1}>{2}", qadc.Host, qadc.Port, rep.Type.ToString()));
+
+            if (rep.Type == ResponseTypes.Success)
+            {
+                Print.Ok(string.Format("{0}:{1}>{2}", qadc.Host, qadc.Port, rep.Type.ToString()));
+            }
+            else
+            {
+                Print.Warn(string.Format("{0}:{1}>{2}", qadc.Host, qadc.Port, rep.Type.ToString()));
+            }
         }
 
     }
@@ -103,6 +137,7 @@ namespace NotificationPump
 
         public QuoteAndDestCombo(string dest, string quote)
         {
+            //Print.Error(dest);
             KeyValuePair<string, string> kvp = Formatting.SplitPair(dest, ':');
             if (!string.IsNullOrEmpty(kvp.Key))
             {

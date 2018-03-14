@@ -48,7 +48,7 @@ namespace KARROT
         void callbackWindow_OnCallbackReceived(Win32Callback callback)
         {
             // uncomment to see what's included...
-            //Debug.WriteLine(">" + callback.Type.ToString());
+            Debug.WriteLine(">" + callback.Type.ToString());
             //Debug.WriteLine(">" + callback.Uid);
             //foreach (KeyValuePair<string, string> kvp in callback.Data)
             //    Debug.WriteLine(">" + kvp.Key + " == " + kvp.Value);
