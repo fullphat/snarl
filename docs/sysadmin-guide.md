@@ -66,11 +66,13 @@ To try this out, do the following:
 * Ensure Snarl is not running
 * Create a text file called `sysadmin.json` in the same folder as Snarl
 * Paste the following into the file and save it:
-  
+
+      
     {
         "HideIcon": false,
         "InhibitPrefs": true,
     }
-  
+    
+
 * Launch Snarl
 * Right-click Snarl's tray icon - you should see access to Snarl's preferences is blocked
