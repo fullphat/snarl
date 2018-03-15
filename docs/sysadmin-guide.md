@@ -8,7 +8,6 @@ Snarl provides system administrators with granular control over how local instal
 
 > ![Info](http://fullphat.net/docs/icons/info.png) _This document is aimed at system administrators in corporate or educational environments who wish to control access to deployed instances of Snarl running on multiple computers._
 
-
 ## Overview
 
 * At startup, Snarl wll look for a file called `redirect.rc` in its working directory
@@ -30,18 +29,20 @@ If provided, `redirect.rc` should contain the following:
     [targets]
     url=..path to configuration file..
 
-"path to configuration file" must be a fully-qualified URL to the configuration file to use.  For example `http://myserver/snarl/finance_team/admin.json`.
+`path to configuration file` must be a fully-qualified URL to the configuration file to use, for example `http://myserver/snarl/finance_team/admin.json`.
 
-To avoid user interference with `redirect.rc`, administrators should ensure that users only have read access to this file on their computer.
+> ![Info](http://fullphat.net/docs/icons/info.png) _To avoid user interference with `redirect.rc`, administrators should ensure that users only have read access to this file on their computer._
 
 ### Sysadmin
 
-This file details which features of Snarl are to be restricted.  It can either be located on a remote server (preferred) or it can be included in the same folder as Snarl itself.  If it's located in the same folder as Snarl it must be called `sysadmin.json`; if it's located on a remote server, it can be called anything.  Unlike `redirect.rc`, this configuration file must be formatted as JSON.
+This file details which features of Snarl are to be restricted.  It can either be located on a remote webserver or it can be included in the same folder as Snarl itself.  If it's located in the same folder as Snarl it _must_ be called `sysadmin.json`.
+
+Unlike `redirect.rc`, this configuration file must be formatted as JSON.
 
 The following settings are currently available:
 
-|`HideIcon`|`bool`|Controls whether Snarl's icon is displayed in the System Tray. Note that this value over-rides the icon control setting in the .snarl configuration but it's also important to note that setting this entry to zero will not force the icon to be visible|
-|`InhibitPrefs`|`bool`|Controls whether Snarl's Preference Panel can be accessed. This setting prevents all access to the panel, including via the API and hot-key shortcut|
+|`HideIcon`|`bool`|Controls whether the Snarl icon is displayed in the System Tray.|
+|`InhibitPrefs`|`bool`|Controls whether the Snarl management server can be accessed from the menu|
 |`InhibitMenu`|`bool`|Controls whether or not the menu appears when the user right-clicks on the Snarl System Tray icon|
 |`InhibitQuit`|`bool`|Controls whether or not Snarl can be stopped by the user. Enabling this option will prevent the user from closing Snarl via the System Tray Menu and most other methods but it does not protect the Snarl.exe process from being terminated via, for example, Task Manager.|
 
@@ -65,11 +66,11 @@ To try this out, do the following:
 * Ensure Snarl is not running
 * Create a text file called `sysadmin.json` in the same folder as Snarl
 * Paste the following into the file and save it:
-
+  
     {
         "HideIcon": false,
         "InhibitPrefs": true,
     }
-
+  
 * Launch Snarl
 * Right-click Snarl's tray icon - you should see access to Snarl's preferences is blocked
