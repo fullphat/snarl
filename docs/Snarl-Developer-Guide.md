@@ -1,3 +1,5 @@
+# Snarl Developer Guide
+
 1. [Introduction](#introduction)  
    i. [Displaying notifications](#displaying-notifications)  
    ii. [Registering and unregistering](#registering-and-unregistering)  
@@ -19,10 +21,13 @@
 
 # Introduction
 
+> ![Info](http://fullphat.net/docs/icons/info.png) _The examples in this document use the Snarl Win32 IPC transport.  You can try them out using the HeySnarlCS application which you can find in the Snarl tools folder_
+
+
 ## Displaying Notifications
 Showing a notification on-screen is very straightforward:
 
-**`notify?title=Hello, world!`**
+    notify?title=Hello, world!
 
 Will generate the following:
 
@@ -30,13 +35,13 @@ Will generate the following:
 
 Alternatively, you can have just an icon:
 
-**`notify?icon-stock=misc-chair`**
+    notify?icon-stock=misc-chair
 
 ![Icon, only](http://fullphat.net/docs/dev/icon%20only.png)
 
 And with a title and some text:
 
-**`notify?title=Hello, world!&text=Chairs, chairs, chairs...&icon-stock=misc-chair`**
+    notify?title=Hello, world!&text=Chairs, chairs, chairs...&icon-stock=misc-chair
 
 ![Chairs, chairs, chairs](http://fullphat.net/docs/dev/chairs%20chairs%20chairs.png)
 
@@ -49,11 +54,12 @@ Unlike the built-in Snarl app, the user can disable Grampf, effectively blocking
 
 ## Registering and Unregistering
 
+.. to follow ..
 
 
 ## Event Classes
 
-
+.. to follow ..
 
 
 # Features
@@ -69,7 +75,7 @@ Snarl can display icons from various sources, including:
 
 To display an icon, include the `icon` property in the request as follows:
 
-**`icon={data}`**
+    icon={data}
 
 `data` can be a URL, path or a file, or stock icon that's included with the Snarl distributable.  Some examples include:
 
@@ -91,7 +97,7 @@ This is a notification with a callback:
 
 And the request that generated it:
 
-`notify?title=Your parcel has been delivered&icon=!misc-gift&callback-invoked=url:http://some.url/`
+    notify?title=Your parcel has been delivered&icon=!misc-gift&callback-invoked=url:http://some.url/
 
 As can be seen, the callback is assigned as part of a `notify` request using the following parameters:
 
@@ -104,7 +110,7 @@ As can be seen, the callback is assigned as part of a `notify` request using the
 ### Callback Format
 The callback action follows a standard pattern, as follows:
 
-**`callback-invoked={prefix}:{data}`**
+    callback-invoked={prefix}:{data}
 
 The different types of callback are as follows:
 
