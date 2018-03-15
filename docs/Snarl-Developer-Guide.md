@@ -21,7 +21,7 @@
 
 # Introduction
 
-> ![Info](http://fullphat.net/docs/icons/info.png) _The examples in this document use the Snarl Win32 IPC transport.  You can try them out using the HeySnarlCS application which you can find in the Snarl tools folder_
+> ![Info](http://fullphat.net/docs/icons/info.png) _The examples use the Snarl Win32 IPC transport.  You can try them out using the HeySnarlCS application which you can find in the Snarl tools folder.  Just run HeySnarlCS "x" (where 'x' is the example request)._
 
 
 ## Displaying Notifications
