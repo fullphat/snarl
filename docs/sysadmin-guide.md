@@ -1,76 +1,75 @@
 # System Administration Guide
 
+> ![Info](http://fullphat.net/docs/icons/info.png) _Note that this documentation applies to Snarl R5.0 Beta 6 and later._
+
 ## Introduction
 
-> ![Info](http://fullphat.net/docs/icons/info.png) _Applies to Snarl R5.0 Beta 6 and later_
-
-Snarl provides system administrators with greater control over how local installations can be configured and secured against unauthorised change.  Individual installations of Snarl can be controlled via a single - or several - configuration files stored on a web server.  The web server will typically be within the same corporate environment, but it need not be.
+Snarl provides system administrators with granular control over how local installations can be configured and secured against unauthorised change.  Individual installations of Snarl can be controlled via a single configuration files stored on a web server.  The web server will typically be within the same corporate environment, but it need not be.
 
 > ![Info](http://fullphat.net/docs/icons/info.png) _This document is aimed at system administrators in corporate or educational environments who wish to control access to deployed instances of Snarl running on multiple computers._
 
 
 ## Overview
 
-Briefly, the process is as follows:
-
 * At startup, Snarl wll look for a file called `redirect.rc` in its working directory
-* This file should contain a single section (`targets`)
-* Within the `targets` section, there should be an entry called `url`
-* `url` should contain the full URL path to a JSON-formatted configuration file
+* If this file exists, Snarl will attempt to load the configuration referred to by the `url` entry in the `targets` section
+* If this file doesn't exist, or Snarl was unable to load the referenced file, it will look for a file called `sysadmin.json` in the working directory
 
 ## The Configuration Files
 
-Snarl administration is based around simple configuration files which are easy to edit and distribute.
-
 ### redirect.rc
 
-When Snarl starts it will look to see if there is a file called sysconfig.ssl in the current program directory (typically this will be /Program Files/full phat products/Snarl/). This file is a simple INI-style text file which should contain a single entry:
+This is used to redirect Snarl to a remote configuration file.  Using remote configuration files is preferred as :
+
+* They are easier to maintain
+* They are, by nature, not modifiable by the end user
+* They allow the option of providing different configurations to different groups of users
+
+If provided, `redirect.rc` should contain the following:
 
     [targets]
-    url=http://myserver/snarl/finance_team/admin.json
+    url=..path to configuration file..
 
-Where `http://myserver/snarl/finance_team/admin.json` is an example URL to the JSON configuration file.
+"path to configuration file" must be a fully-qualified URL to the configuration file to use.  For example `http://myserver/snarl/finance_team/admin.json`.
 
-To avoid user interference with the sysconfig.ssl, administrators should ensure that users only have read access to this file on their computer.
+To avoid user interference with `redirect.rc`, administrators should ensure that users only have read access to this file on their computer.
 
-## JSON configuration
+### Sysadmin
 
-This is a new file which contains administration settings specific to Snarl. Note that the contains of this file may be subsumed into the existing .snarl file in future revisions.  This file must exist in the supplied Snarl configuration folder for it to be loaded by Snarl.
+This file details which features of Snarl are to be restricted.  It can either be located on a remote server (preferred) or it can be included in the same folder as Snarl itself.  If it's located in the same folder as Snarl it must be called `sysadmin.json`; if it's located on a remote server, it can be called anything.  Unlike `redirect.rc`, this configuration file must be formatted as JSON.
 
 The following settings are currently available:
 
-* HideIcon=[0|1] - controls whether Snarl's icon is displayed in the System Tray. Note that this value over-rides the icon control setting in the .snarl configuration but it's also important to note that setting this entry to zero will not force the icon to be visible
-* InhibitPrefs=[0|1] - controls whether Snarl's Preference Panel can be accessed. This setting prevents all access to the panel, including via the API and hot-key shortcut
-* InhibitMenu=[0|1] - controls whether or not the menu appears when the user right-clicks on the Snarl System Tray icon
-* InhibitQuit=[0|1] - controls whether or not Snarl can be stopped by the user. Enabling this option will prevent the user from closing Snarl via the System Tray Menu and most other methods but it does not protect the Snarl.exe process from being terminated via, for example, Task Manager.
-* TreatSettingsAsReadOnly=[0|1] - changes made to Snarl's local configuration (i.e. anything that would usually be saved to the .snarl file) are not saved.
+|`HideIcon`|`bool`|Controls whether Snarl's icon is displayed in the System Tray. Note that this value over-rides the icon control setting in the .snarl configuration but it's also important to note that setting this entry to zero will not force the icon to be visible|
+|`InhibitPrefs`|`bool`|Controls whether Snarl's Preference Panel can be accessed. This setting prevents all access to the panel, including via the API and hot-key shortcut|
+|`InhibitMenu`|`bool`|Controls whether or not the menu appears when the user right-clicks on the Snarl System Tray icon|
+|`InhibitQuit`|`bool`|Controls whether or not Snarl can be stopped by the user. Enabling this option will prevent the user from closing Snarl via the System Tray Menu and most other methods but it does not protect the Snarl.exe process from being terminated via, for example, Task Manager.|
 
 Some points to note:
 
-For entries which require a zero or one value, one will enable the restriction. To leave a restriction disabled, it is acceptable to not omit the entry entirely
-For entries which require a zero or one value, setting the restriction to zero does not forcibly disable that restriction.
+* If a setting isn't provided, it's assumed to be `False`
+* Setting an entry to `False` does not forcibly disable the restriction
+
+## Example Configuration File
+
+    {
+        "HideIcon": false,
+        "InhibitPrefs": true,
+    }
+
 
 ## Worked Example
 
 To try this out, do the following:
 
 * Ensure Snarl is not running
-* Create a text file called `redirect.rc` in Snarl's installation folder
-* Edit the text file
-* Save the file
-* Create a folder called snarl in c:\
-* Create a folder called etc in c:\snarl
-* Create a text file called snarl.admin in c:\snarl\etc
-* Edit snarl.admin and enter the following:
+* Create a text file called `sysadmin.json` in the same folder as Snarl
+* Paste the following into the file and save it:
 
-    InhibitPrefs=1
-    TreatSettingsAsReadOnly=1
+    {
+        "HideIcon": false,
+        "InhibitPrefs": true,
+    }
 
-* Save snarl.admin
 * Launch Snarl
-* Right-click (or double-click) Snarl's tray icon - you should see access to Snarl's preferences is blocked
-* Quit Snarl
-* Open the c:\Snarl\etc folder
-* Note that no Snarl configuration files have been written to this folder
-
-
+* Right-click Snarl's tray icon - you should see access to Snarl's preferences is blocked
