@@ -10,10 +10,10 @@
     |___    \|       ||   .   ||  \____||   |        |  \____||___    \     | :   |  |
     |       /|   |   ||   :   ||   :  \ |   |/\      |   :  \ |       /     |     :  |
     |__:___/ |___|   ||___|   ||   |___\|   /  \     |   |___\|__:___/       \_. ___/ 
-       :         |___|    |___||___|    |______/     |___|       :             :/        [ B e t a  6 ]
+       :         |___|    |___||___|    |______/     |___|       :             :/ 
                                                                            :      
 
-[Developer Guide](http://fullphat.github.io/snarl/)
+Go here for the l33t [Developer Guide](http://fullphat.github.io/snarl/) bruh...
 
 
 
