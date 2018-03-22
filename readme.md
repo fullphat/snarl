@@ -11,9 +11,9 @@
     |       /|   |   ||   :   ||   :  \ |   |/\      |   :  \ |       /     |     :  |
     |__:___/ |___|   ||___|   ||   |___\|   /  \     |   |___\|__:___/       \_. ___/ 
        :         |___|    |___||___|    |______/     |___|       :             :/ 
-                                                                           :      
+                                                                               :      
 
-Go here for the l33t [Developer Guide](http://fullphat.github.io/snarl/) bruh...
+L33t [Developer Guide here](http://fullphat.github.io/snarl/) bruh...
 
 
 
