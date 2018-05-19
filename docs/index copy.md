@@ -1,33 +1,27 @@
+# Welcome Developers!
 
 ![Hello, World](http://fullphat.net/docs/dev/hello_devs.png)
 
 This is the starting point if you’re setting out on developing for Snarl.
 
-If you're new to Snarl, you want to start with the **Core Documentation** which eases you into using Snarl.  We strongly recommend reading these in the order they appear.
+Snarl provides extensive support for all sorts of different languages (we tend to prefer VB6, Python and C# but we’re weird like that) and platforms.
 
 ## Core Documentation
 
-* [Introduction](Snarl-Introduction)
-
 * [Developer Guide](Snarl-Developer-Guide)
-
 * [API Reference](Snarl-API-Reference)
-
 * [Notification Guidelines](Notification-Guidelines)
+* [System Administration Guide](sysadmin-guide)
 
 ## Useful Links
 
-* [Developer forum](https://github.com/fullphat/snarl/issues)
+* [Developer forum](https://github.com/fullphat/snarl/issues) - hosted here on lovely GitHub!
 
 ## Other Documentation
 
 * [Snarl Network Protocol](/snarl_network_protocol/) documentation
-
 * [Tutorials](http://snarl.fullphat.net/category/tutorials/) - A series of simple tutorials that explains how specific features work, and get you up and running quickly.
-
 * [Concepts](http://snarl.fullphat.net/category/concepts/) - Thoughts and ideas about how Snarl could be used to further human development, reduce global conflict, or possibly just keep up with sports scores.
-
-* [System Administration Guide](sysadmin-guide)
 
 ## Libraries and Frameworks
 
