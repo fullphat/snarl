@@ -1,10 +1,7 @@
-# Welcome Developers!
 
 ![Hello, World](http://fullphat.net/docs/dev/hello_devs.png)
 
 This is the starting point if you’re setting out on developing for Snarl.
-
-Snarl provides extensive support for all sorts of different languages (we tend to prefer VB6, Python and C# but we’re weird like that) and platforms.
 
 ## Core Documentation
 
@@ -15,7 +12,7 @@ Snarl provides extensive support for all sorts of different languages (we tend t
 
 ## Useful Links
 
-* [Developer forum](https://github.com/fullphat/snarl/issues) - hosted here on lovely GitHub!
+* [Developer forum](https://github.com/fullphat/snarl/issues)
 
 ## Other Documentation
 
