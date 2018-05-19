@@ -3,7 +3,7 @@
 
 This is the starting point if you’re setting out on developing for Snarl.
 
-If you're new to Snarl, you want to start with the **Core Documentation** which eases you into using Snarl.  We strongly recommend reading these in the order they appear.
+If you're new to Snarl, you want to start with the [Introduction](Snarl-Introduction) which explains how Snarl operates and the various terminology used.  Old hands may want to dive straight into the Developer Guide and API Reference.
 
 ## Core Documentation
 
