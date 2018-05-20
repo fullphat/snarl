@@ -1,5 +1,5 @@
 
-Before we dive into Snarl, let's take a moment to talk about how Snarl is structured internally.  
+## Introduction 
 
 Snarl provides the **Core API** which external applications use to register, manage events and create notifications.  The Core API is accessed through **Transports** which are code modules that run within Snarl and translate incoming requests into Core API requests for processing.
 
