@@ -2,11 +2,13 @@
 
 # Welcome to Snarl
 
-![Hello, World](http://fullphat.net/docs/dev/hello_devs.png)
+![Hello, World](https://github.com/fullphat/snarl/raw/master/docs/img/stuff%20happens.png)
 
-- [Download](https://sourceforge.net/projects/snarlwin/files/Snarl/R5/Release/)  
-- [Follow news updates via Twitter](https://twitter.com/tweetSnarl)  
-- [Developer Guide here](http://fullphat.github.io/snarl/)
+[Download](https://sourceforge.net/projects/snarlwin/files/Snarl/R5/Release/)  
+
+[Follow news updates via Twitter](https://twitter.com/tweetSnarl)  
+
+[Developer Guide](http://fullphat.github.io/snarl/)
 
 ## Why Snarl?
 
