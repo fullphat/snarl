@@ -4,11 +4,11 @@
 
 ![Hello, World](http://fullphat.net/docs/dev/hello_devs.png)
 
-[Download Snarl](http://fullphat.github.io/snarl/)  
-[Follow news updates via Twitter](https://twitter.com/tweetSnarl)
+- [Download](https://sourceforge.net/projects/snarlwin/files/Snarl/R5/Release/)  
+- [Follow news updates via Twitter](https://twitter.com/tweetSnarl)  
+- [Developer Guide here](http://fullphat.github.io/snarl/)
 
-[Developer Guide here](http://fullphat.github.io/snarl/)
-
+## Why Snarl?
 
 With the advent of smartphones and Cloud services, it’s now easier than ever to keep up to date with events within the world.  Whether these are very localised events like receiving a text message from a family member or global events such as receiving an alert from a 24/7 news feed, or anywhere in between – there is always something happening.
 
